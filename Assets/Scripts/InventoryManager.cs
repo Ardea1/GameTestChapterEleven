@@ -91,11 +91,11 @@ public class InventoryManager : MonoBehaviour, IGameManager
         if (_items.ContainsKey(name) && equippedItem != name)
         {
             equippedItem = name;
-            Debug.Log("Equipped " + name);
+            Debug.Log("Экипирован " + name);
             return true;
         }
         equippedItem = null;
-        Debug.Log("Unequipped");
+        Debug.Log("Не экипирован");
         return false;
     }
 

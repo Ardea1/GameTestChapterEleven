@@ -42,6 +42,15 @@ public class PlayerManager : MonoBehaviour, IGameManager
         {
             health = 0;
         }
+
+        // –ассылка сообщени€ health из
+        // сценари€ PlayerManager.
+        // —ообщение рассылаетс€ каждый
+        // раз, когда метод ChangeHealth()
+        // завершает свою работу, сообща€
+        // остальной программе об изменении
+        // параметра health.
+        Messenger.Broadcast(GameEvent.HEALTH_UPDATED);
         Debug.Log("Health: " + health + "/" + maxHealth);
     }
 }
