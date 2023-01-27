@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorChangeDevice : MonoBehaviour
+public class ColorChangeDevice : BaseDevice
 {
     // ќбъ€вление метода с таким же цветом,
     // как в сценарии дл€ двери.
-    public void Operate()
+    public override void Operate()
     {
         // Ёти числа представл€ют собой RGB-значени€
         // в диапазоне от 0 до 1.

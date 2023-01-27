@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 191464524}
   - component: {fileID: 191464523}
   - component: {fileID: 191464527}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 195846814}
   - component: {fileID: 195846813}
   - component: {fileID: 195846817}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 197164773}
   - component: {fileID: 197164772}
   - component: {fileID: 197164771}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstacle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 342898859}
   - component: {fileID: 342898858}
   - component: {fileID: 342898862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1326,7 +1326,7 @@ GameObject:
   - component: {fileID: 800612543}
   - component: {fileID: 800612542}
   - component: {fileID: 800612541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstacle(2)  (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1465,6 +1465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building
       objectReference: {fileID: 0}
+    - target: {fileID: 3513096956004280275, guid: 70feeeeb1e416964e8b18c27af7039fe, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70feeeeb1e416964e8b18c27af7039fe, type: 3}
 --- !u!1 &809967188
@@ -1479,7 +1483,7 @@ GameObject:
   - component: {fileID: 809967191}
   - component: {fileID: 809967190}
   - component: {fileID: 809967189}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1709,7 +1713,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 65c0287bc7fd06740b535ea095dfd3d7, type: 3}
       propertyPath: m_Name
-      value: player
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65c0287bc7fd06740b535ea095dfd3d7, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 65c0287bc7fd06740b535ea095dfd3d7, type: 3}
       propertyPath: m_Controller
@@ -1790,13 +1798,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  rotSpeed: 15
   moveSpeed: 6
+  rotSpeed: 15
   jumpSpeed: 15
   gravity: -9.8
   terminalVelocity: -10
   minFall: -1.5
   pushForce: 3
+  deceleration: 25
+  targetBuffer: 1.5
 --- !u!143 &851135126
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1815,19 +1825,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &851135127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851135123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fea65afb3bda3340946a131e426cdb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 1.5
 --- !u!114 &851135128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2651,6 +2648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80da686421517e942b6366d18cd67830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 3.5
 --- !u!1 &1576580839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,7 +2755,7 @@ GameObject:
   - component: {fileID: 1611856219}
   - component: {fileID: 1611856218}
   - component: {fileID: 1611856222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2869,7 +2867,7 @@ GameObject:
   - component: {fileID: 1660383995}
   - component: {fileID: 1660383994}
   - component: {fileID: 1660383993}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Obstacle(2) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3087,7 +3085,7 @@ GameObject:
   - component: {fileID: 1730809452}
   - component: {fileID: 1730809451}
   - component: {fileID: 1730809450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstacle(1) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3183,7 +3181,7 @@ GameObject:
   - component: {fileID: 1790955475}
   - component: {fileID: 1790955474}
   - component: {fileID: 1790955473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstacle(1) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3279,7 +3277,7 @@ GameObject:
   - component: {fileID: 1871108640}
   - component: {fileID: 1871108639}
   - component: {fileID: 1871108638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstacle(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3433,7 +3431,7 @@ GameObject:
   - component: {fileID: 1990012272}
   - component: {fileID: 1990012271}
   - component: {fileID: 1990012275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

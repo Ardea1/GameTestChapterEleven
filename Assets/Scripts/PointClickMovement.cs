@@ -69,15 +69,17 @@ public class PointClickMovement : MonoBehaviour
 			RaycastHit mouseHit;
 			if (Physics.Raycast(ray, out mouseHit))
 			{
-				//GameObject hitObject = mouseHit.transform.gameObject;
-				//if (hitObject.layer == LayerMask.NameToLayer("Ground"))
-				//{
-					// Устанавливаем цель в точке
-					// падения луча.
-					_targetPos = mouseHit.point;
+				// Проверка слоя, к которому принадлежит
+				// объект.
+                GameObject hitObject = mouseHit.transform.gameObject;
+                if (hitObject.layer == LayerMask.NameToLayer("Ground"))
+                {
+                    // Устанавливаем цель в точке
+                    // падения луча.
+                    _targetPos = mouseHit.point;
 					_curSpeed = moveSpeed;
-				//}
-			}
+                }
+            }
 		}
 
 		// Перемещаем при заданной целевой точке.
