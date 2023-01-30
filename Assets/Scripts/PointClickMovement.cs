@@ -61,7 +61,7 @@ public class PointClickMovement : MonoBehaviour
 
 		// Задаём целевую точку
 		// по щелчку мыши.
-		if (Input.GetMouseButton(0) /*&& !EventSystem.current.IsPointerOverGameObject()*/)
+		if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
 		{
 			// Искускаем луч в точку
 			// щелчка мышью.
@@ -114,7 +114,7 @@ public class PointClickMovement : MonoBehaviour
 		bool hitGround = false;
 		RaycastHit hit;
 
-		// Проверяем, падает лди персонаж.
+		// Проверяем, падает ли персонаж.
 		if (_vertSpeed < 0 && Physics.Raycast(transform.position, Vector3.down, out hit))
 		{
 			// Расстояние, с которым производится сравнение
